@@ -1,0 +1,10 @@
+---
+- name: Example2
+  hosts: yandex_cloud
+
+  tasks:
+  - name: remove git
+    ansible.builtin.apt:
+      name: git-all
+      state: absent
+    become: yes
